@@ -38,9 +38,10 @@ const Contact = () => {
     <section className="py-20 px-8" id="contact">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-mono">
             Get In Touch
@@ -68,9 +69,15 @@ const Contact = () => {
                     filter: 'drop-shadow(0 0 10px currentColor)',
                   }}
                   whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * socialLinks.indexOf(link) }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: 0.1 * socialLinks.indexOf(link),
+                    type: "spring",
+                    stiffness: 300
+                  }}
                 >
                   <IconComponent size={24} />
                 </motion.a>

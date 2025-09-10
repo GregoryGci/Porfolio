@@ -9,9 +9,12 @@
  * - Mouvement aléatoire et fluide
  * - Performance optimisée
  */
-import { motion } from 'framer-motion' // eslint-disable-line
+import { motion, useScroll, useTransform } from 'framer-motion' // eslint-disable-line
 
 const ParticleBackground = () => {
+  const { scrollYProgress } = useScroll()
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50])
+  
   // Génère des particules avec propriétés aléatoires
   const particles = Array.from({ length: 50 }, (_, i) => ({
     id: i,
@@ -22,7 +25,10 @@ const ParticleBackground = () => {
   }))
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <motion.div 
+      className="fixed inset-0 z-0 overflow-hidden pointer-events-none"
+      style={{ y }}
+    >
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -46,7 +52,7 @@ const ParticleBackground = () => {
           }}
         />
       ))}
-    </div>
+    </motion.div>
   )
 }
 

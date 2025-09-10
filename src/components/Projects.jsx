@@ -83,11 +83,11 @@ const Projects = () => {
                 <p className="text-gray-400 mb-4 font-display group-hover:opacity-0 transition-opacity duration-300">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-black/40 backdrop-blur-sm border border-white/60 text-blue-200 text-sm rounded-full shadow-lg font-medium"
+                      className="px-3 py-1 bg-black/70 backdrop-blur-md border border-white/80 text-white text-sm rounded font-semibold shadow-xl"
                     >
                       {tech}
                     </span>

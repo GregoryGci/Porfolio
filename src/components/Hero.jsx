@@ -23,6 +23,7 @@
  */
 import { motion } from 'framer-motion' // eslint-disable-line
 import { ArrowDown } from 'lucide-react'
+import TypingEffect from './TypingEffect'
 
 const Hero = () => {
   return (
@@ -37,7 +38,11 @@ const Hero = () => {
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide font-mono">
             <span className="text-gray-200">HELLO, I'M </span>
-            <span className="text-blue-400">GREGORY GAUCI</span>
+            <TypingEffect 
+              text="GREGORY GAUCI" 
+              speed={100}
+              className="text-blue-400"
+            />
           </h1>
         </motion.div>
 
