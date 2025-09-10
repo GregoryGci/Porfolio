@@ -54,42 +54,39 @@ const Header = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
-              <motion.a
+              <a
                 key={item.name}
                 href={item.href}
-                className="hover:text-blue-400 transition-colors duration-300"
-                whileHover={{ y: -2 }}
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
               >
                 {item.name}
-              </motion.a>
+              </a>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <motion.div
-            className="md:hidden mt-4 space-y-4"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-          >
+          <div className="md:hidden mt-4 space-y-4">
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block hover:text-blue-400 transition-colors duration-300"
+                className="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-          </motion.div>
+          </div>
         )}
       </nav>
     </header>

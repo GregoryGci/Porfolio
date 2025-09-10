@@ -12,6 +12,8 @@
  * - Background : fixed, z-0 (derrière tout)
  * - Content : relative, z-10 (par-dessus le background)
  */
+import ParticleBackground from './ParticleBackground'
+
 const Layout = ({ children }) => {
   return (
     <>
@@ -21,9 +23,12 @@ const Layout = ({ children }) => {
           src="/src/assets/bg.jpg" 
           alt="Background" 
           className="w-full h-full object-cover brightness-75 contrast-125 saturate-150 hue-rotate-15"
-          style={{filter: 'sepia(0.2) brightness(0.9) contrast(1.2)'}}
+          style={{filter: 'sepia(0.2) brightness(0.6) contrast(1.2)'}}
         />
       </div>
+      
+      {/* Particules animées subtiles */}
+      <ParticleBackground />
       
       {/* Container principal pour tout le contenu */}
       <div className="min-h-screen text-white relative z-10">

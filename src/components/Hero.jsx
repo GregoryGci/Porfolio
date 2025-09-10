@@ -26,50 +26,45 @@ import { ArrowDown } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative" id="home">
-      <div className="text-center z-10 px-6">
-        {/* Main Title with Glitch Effect */}
-        <motion.h1 
-          className="text-4xl md:text-7xl font-bold mb-6 tracking-wider font-mono"
-          initial={{ opacity: 0, y: 20 }}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" id="home">
+      <div className="text-center z-10 px-8 max-w-5xl mx-auto">
+        {/* Main Title avec gradient et espacement amélioré */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          className="mb-8"
         >
-          <span className="block">HELLO,</span>
-          <span className="block text-blue-800">I'M DEVELOPER</span>
-        </motion.h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide font-mono">
+            <span className="text-gray-200">HELLO, I'M </span>
+            <span className="text-blue-400">GREGORY GAUCI</span>
+          </h1>
+        </motion.div>
 
-        {/* Subtitle */}
+        {/* Subtitle avec meilleure hiérarchie */}
         <motion.p 
-          className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed font-display"
+          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-display font-light"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
-          I spend my days (and often nights) painting the Internet canvas with 
-          <span className="text-blue-700"> Projects </span> and lines of code
+          <span className="text-blue-400 font-medium">Fullstack Web Developer</span> passionate about creating 
+          modern web applications and bringing ideas to life through code
         </motion.p>
 
-        {/* CTA Button */}
-        <motion.button
-          className="bg-blue-900 hover:bg-blue-700 cursor-pointer px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+        {/* CTA Button avec design moderne */}
+        <motion.a
+          href="#projects"
+          className="inline-block px-8 py-3 border-2 border-blue-400 text-blue-400 hover:text-white hover:bg-blue-400 rounded-lg font-semibold font-display tracking-wide shadow-lg shadow-blue-400/20 hover:shadow-blue-400/40 transition-all duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scale: 0.98 }}
         >
           View My Work
-        </motion.button>
+        </motion.a>
 
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ArrowDown size={24} className="text-gray-400" />
-        </motion.div>
       </div>
     </section>
   )
