@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       {/* Background Image avec filtres CSS pour effet stylé */}
       <div className="fixed inset-0 z-0">
         <img 
-          src="/src/assets/bg.jpg" 
+          src="/assets/bg.jpg" 
           alt="Background" 
           className="w-full h-full object-cover brightness-75 contrast-125 saturate-150 hue-rotate-15"
           style={{filter: 'sepia(0.2) brightness(0.6) contrast(1.2)'}}

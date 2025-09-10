@@ -13,7 +13,7 @@ const Projects = () => {
       description:
         "A simple and efficient task management application.",
       tech: ["HTML", "CSS vanilla", "JavaScript"],
-      image: "/src/assets/images/tudo-app.jpg",
+      image: "/assets/images/tudo-app.jpg",
       url: "https://gregorygci.github.io/-TodoApp/",
     },
     {
@@ -21,7 +21,7 @@ const Projects = () => {
       title: "Weather App",
       description: "Modern weather application with detailed forecasts",
       tech: ["Vue.js", "Express", "PostgreSQL"],
-      image: "/src/assets/images/weather-app.jpg",
+      image: "/assets/images/weather-app.jpg",
       url: "https://waetherapp.netlify.app/",
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       title: "Prisme App",
       description: "AI-powered surveillance application with intelligent monitoring and real-time alerts",
       tech: ["ReactNative", "TypeScript", "ExpoGo"],
-      image: "/src/assets/images/Veilleia-app.jpg",
+      image: "/assets/images/Veilleia-app.jpg",
       url: "https://github.com/GregoryGci/prisme-app",
     },
   ];

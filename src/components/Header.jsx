@@ -45,7 +45,7 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             <img
-              src="/src/assets/logo.svg"
+              src="/assets/logo.svg"
               alt="Gregory Gauci"
               className="h-full w-full object-contain"
             />
